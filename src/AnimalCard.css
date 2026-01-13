@@ -1,0 +1,68 @@
+.animals-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .animals-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .animals-container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+  }
+}
+
+.animal-card {
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #1e1e1e; /* Applied dark theme background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  margin: 0; /* Let grid handle margin */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.animal-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.animal-card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.animal-card-content {
+  padding: 24px;
+}
+
+.animal-card-name {
+  margin: 0 0 12px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f0f0f0; /* Applied dark theme color */
+  letter-spacing: -0.5px;
+}
+
+.animal-card-info {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc; /* Applied dark theme color */
+}
